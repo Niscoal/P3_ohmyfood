@@ -47,6 +47,14 @@ header {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .localisation {
+        border-radius: 20px 20px 0 0;
+        box-shadow: 2px 5px 10px darken($dark-background-color,5%);
+
+    }
+}
+
 .description {
     width: 100%;
     text-align: center;
@@ -57,7 +65,7 @@ header {
     }
     & p {
         font-size: large;
-        font-weight:300;
+        font-weight: 300;
         padding: 0 20px;
     }
     &__button {
@@ -68,6 +76,14 @@ header {
         border-radius: 50px;
         background: linear-gradient(to bottom right, $secondary-color, $primary-color);
         box-shadow: 2px 5px 10px darken($dark-background-color,15%);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .description {
+        border-radius: 0 0 20px 20px;
+        box-shadow: 2px 5px 10px darken($dark-background-color,5%);
+
     }
 }
 
@@ -178,6 +194,28 @@ header {
     }
 
 }
+
+@media screen and (min-width: 768px) {
+    .restaurants {
+        margin: 0 auto;
+        flex-flow: row wrap;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 2px 5px 10px darken($dark-background-color,5%);
+        row-gap: 40px;
+        & h1 {
+            width: 100%;
+        }
+        &__card {
+            width: 40%;
+            margin: 0 auto;
+        }
+        &__card--img {
+            max-width: 100%;
+            max-height: 150px;
+        }
+    }
+}
+
 footer {
     display: flex;
     padding-left: 25px;
