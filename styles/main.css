@@ -43,7 +43,7 @@ header {
 @media screen and (min-width: 768px) {
   .localisation {
     border-radius: 20px 20px 0 0;
-    box-shadow: 2px 5px 10px #dddddd;
+    box-shadow: inset 0px 2px 5px #d0d0d0, 2px 5px 10px #dddddd;
   }
 }
 .description {
@@ -68,6 +68,11 @@ header {
   border-radius: 50px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 2px 5px 10px #c3c3c3;
+}
+.description__button:hover {
+  box-shadow: 2px 5px 10px #838383;
+  opacity: 0.9;
+  transition: 0.1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -96,6 +101,8 @@ header {
 }
 .fonctionnement__btn:hover {
   background-color: #f2eafb;
+  box-shadow: 2px 5px 10px #b6b6b6;
+  transition: 0.1s;
 }
 .fonctionnement__btn:hover i {
   color: #9356DC;
@@ -138,12 +145,18 @@ header {
   padding: 30px 0 0 20px;
 }
 .restaurants__card {
+  position: relative;
   display: flex;
   flex-flow: column wrap;
   margin: 0 25px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 5px 10px #dddddd;
+}
+.restaurants__card:hover {
+  box-shadow: 2px 5px 10px #838383;
+  opacity: 0.9;
+  transition: 0.2s;
 }
 .restaurants__card--img {
   max-height: 200px;
@@ -153,7 +166,7 @@ header {
 }
 .restaurants__card--img--nouveau {
   position: absolute;
-  right: 37px;
+  right: 13px;
   background-color: #99E2D0;
   color: #008766;
   font-size: small;
@@ -227,6 +240,9 @@ footer a i {
   max-width: 25px;
   padding-right: 20px;
   font-size: small;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 footer .footer__fin {
   font-weight: 300;
