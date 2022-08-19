@@ -17,6 +17,9 @@ header {
   text-align: center;
   padding: 20px 0 10px 0;
 }
+header img {
+  width: 10rem;
+}
 
 @media screen and (min-width: 768px) {
   body {
@@ -44,6 +47,7 @@ header {
   .localisation {
     border-radius: 20px 20px 0 0;
     box-shadow: inset 0px 2px 5px #d0d0d0, 2px 5px 10px #dddddd;
+    transition: 0.4s;
   }
 }
 .description {
@@ -79,6 +83,7 @@ header {
   .description {
     border-radius: 0 0 20px 20px;
     box-shadow: 2px 5px 10px #dddddd;
+    transition: 0.4s;
   }
 }
 .fonctionnement {
@@ -204,6 +209,7 @@ header {
     border-radius: 20px 20px 0 0;
     box-shadow: 2px 5px 10px #dddddd;
     row-gap: 40px;
+    transition: 0.2s;
   }
   .restaurants h1 {
     width: 100%;
@@ -226,10 +232,10 @@ footer {
   color: white;
   row-gap: 10px;
 }
-footer h2 {
+footer h4 {
   font-family: "Shrikhand", cursive;
-  font-size: larger;
-  font-weight: unset;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 footer a {
   color: white;

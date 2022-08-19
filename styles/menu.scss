@@ -1,3 +1,228 @@
-.test {
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$background-color: #f6f6f6;
+$dark-background-color: darken($background-color,5%);
+$font-color: black;
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header, main, footer {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: $font-color;
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-family: 'Shrikhand', cursive;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: lighten($font-color, 40%);
+    margin: 0;
+}
+/* -------------------------- FIN DES APPELS -------------------------- */
+header {
+    position: relative;
     width: 100%;
+    text-align: center;
+    padding: 20px 0 0 0;
+    & img {
+        width: 10rem;
+    }
+    & i {
+        font-size: 1.3rem;
+        position: absolute;
+        left: 20px;
+        color: $font-color;
+    }
+    & figure {
+        margin: 10px 0 -50px 0;
+        & img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        max-width: 1200px;
+    }
+}
+
+main {
+    position: relative;
+    border-radius: 40px 40px 0 0;
+    background-color: $background-color;
+    padding: 20px 10px;
+    & h1 {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 8px;
+        & i {
+            margin-right: 20px;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    & h2 {
+        margin: 30px 0 0 8px;
+    }
+    &__souligne {
+        margin: 0.3rem 0 1rem 0;
+        margin-left: 8px;
+        width: 2.5rem;
+        height: 3px;
+        background-color: $tertiary-color;
+    }
+}
+
+.menu__card {
+    display: flex;
+    width: 100%;
+    background-color: lighten($background-color, 100%);
+    border-radius: 15px;
+    box-shadow: 2px 5px 10px darken($dark-background-color,10%);
+    margin-bottom: 0.8rem;
+    &--fixe {
+        margin: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+        * {
+            margin: unset;
+            padding: 2px 2px;
+            color: $font-color;
+        }
+        & h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 12px;
+        }
+
+        & p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &--bottom {
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        & span {
+            font-weight: 600;
+            color: lighten($font-color, 20%);
+            padding-right: 12px;
+        }
+    }
+    &--mobile {
+        max-width: 100%;
+        display: flex;
+        border-radius: 0 15px 15px 0;
+        background-color: $tertiary-color;
+        & i {
+            margin: auto 20px;
+            font-size: 1.3rem;
+            color: lighten($font_color, 100%);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .titre {
+        width: 100%;
+    }
+    .menu {
+        max-width: 33%;
+    }
+
+}
+
+footer {
+    display: flex;
+    padding-left: 25px;
+    padding-bottom: 35px;
+    flex-direction: column;
+    background-color: darken($background-color, 75%);
+    color: white;
+    row-gap: 10px;
+    & h4 {
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    & a {
+        color: white;
+        font-weight: 400;
+        font-size: medium;
+        & i {
+            max-width: 25px;
+            padding-right: 20px;
+            font-size: small;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    & .footer__fin {
+        font-weight: 300;
+    }
+}
+
+.description {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+    &__button {
+        text-align: center;
+        color: white;
+        display: inline-block;
+        padding: 15px 50px;
+        margin: 20px 0 50px 0;
+        border-radius: 50px;
+        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+        box-shadow: 2px 5px 10px darken($dark-background-color,15%);
+        &:hover {
+            box-shadow: 2px 5px 10px darken($dark-background-color,40%);
+            opacity: 0.9;
+            transition: 0.1s;
+        }
+    }
 }
