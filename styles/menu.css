@@ -72,7 +72,22 @@ main h1 {
   padding-left: 8px;
 }
 main h1 i {
+  font-size: 1.5rem;
   margin-right: 20px;
+}
+main h1 i:nth-child(2) {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 25px;
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: 200ms;
+}
+main h1 i:nth-child(2):hover {
+  opacity: 1;
 }
 
 .menu {
@@ -92,6 +107,8 @@ main h1 i {
 
 .menu__card {
   display: flex;
+  position: relative;
+  overflow: hidden;
   width: 100%;
   background-color: white;
   border-radius: 15px;
@@ -103,7 +120,8 @@ main h1 i {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  width: calc(100% - 80px);
+  width: 100%;
+  transition: width 500ms;
 }
 .menu__card--fixe * {
   margin: unset;
@@ -125,8 +143,8 @@ main h1 i {
   text-overflow: ellipsis;
 }
 .menu__card--fixe--bottom {
-  width: 100%;
   display: flex;
+  width: 100%;
   flex-flow: row nowrap;
   justify-content: space-between;
   white-space: nowrap;
@@ -143,15 +161,33 @@ main h1 i {
   opacity: 0.9;
   transition: 0.2s;
 }
-.menu__card--mobile {
+.menu__card:hover .menu__card--mobile {
   display: flex;
+  transform: translateX(-62px);
+}
+.menu__card:hover .menu__card--mobile i {
+  transform: rotate(360deg);
+}
+.menu__card:hover .menu__card--fixe {
+  width: calc(100% - 80px);
+}
+.menu__card--mobile {
+  position: absolute;
+  height: 70.61px;
+  right: -65px;
+  display: flex;
+  transform: translateX(0px);
+  transition: transform 500ms;
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
 }
 .menu__card--mobile i {
   margin: auto 20px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  font-weight: 900;
   color: white;
+  transform: rotate(0deg);
+  transition: transform 500ms ease-out;
 }
 
 @media screen and (min-width: 1200px) {

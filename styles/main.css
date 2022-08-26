@@ -200,6 +200,24 @@ header img {
 .restaurants__card--legende i {
   margin-right: 12px;
   font-size: x-large;
+  -webkit-background-clip: text;
+          background-clip: text;
+  opacity: 1;
+}
+.restaurants__card--legende i:nth-child(2) {
+  position: absolute;
+  right: 0px;
+  margin-right: 12px;
+  font-size: x-large;
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: 200ms;
+}
+.restaurants__card--legende i:nth-child(2):hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {

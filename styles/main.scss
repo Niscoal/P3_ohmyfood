@@ -2,6 +2,7 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $background-color: #f6f6f6;
+$heart-color: linear-gradient(to top, $secondary-color, $primary-color);
 $dark-background-color: darken($background-color,5%);
     
 * {
@@ -209,6 +210,22 @@ header {
     &__card--legende i {
         margin-right: 12px;
         font-size: x-large;
+        background-clip: text;
+        opacity: 1;
+        &:nth-child(2) {
+            position: absolute;
+            right: 0px;
+            margin-right: 12px;
+            font-size: x-large;
+            background: $heart-color;
+            background-clip: text;
+            color: transparent;
+            opacity: 0;
+            transition: 200ms;
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 
 }
