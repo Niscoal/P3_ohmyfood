@@ -67,38 +67,44 @@ main {
   padding: 20px 10px;
 }
 main h1 {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding-left: 8px;
 }
-main h1 i {
-  font-size: 1.5rem;
-  margin-right: 20px;
-}
-main h1 i:nth-child(2) {
-  font-size: 1.5rem;
-  position: absolute;
-  right: 25px;
+
+.titre--heart::before {
   background: linear-gradient(to top, #FF79DA, #9356DC);
+  margin-right: 12px;
+  font-size: x-large;
   -webkit-background-clip: text;
           background-clip: text;
-  color: transparent;
-  opacity: 0;
-  transition: 200ms;
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 500;
+  transition: color 200ms;
 }
-main h1 i:nth-child(2):hover {
-  opacity: 1;
+
+.titre--heart:hover::before {
+  font-weight: 600;
+  color: transparent;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
+  -webkit-animation: fondu 750ms;
+          animation: fondu 750ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
 }
 .menu h2 {
   margin: 30px 0 0 8px;
 }
 .menu__souligne {
-  margin: 0.3rem 0 1rem 0;
+  margin: 0.3rem 0 0.3rem 0;
   margin-left: 8px;
   width: 2.5rem;
   height: 3px;
@@ -106,6 +112,11 @@ main h1 i:nth-child(2):hover {
 }
 
 .menu__card {
+  -webkit-animation: fondu 750ms;
+          animation: fondu 750ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -113,7 +124,7 @@ main h1 i:nth-child(2):hover {
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 5px 10px #d0d0d0;
-  margin-bottom: 0.8rem;
+  margin-top: 0.8rem;
 }
 .menu__card--fixe {
   margin: 10px;
@@ -190,6 +201,66 @@ main h1 i:nth-child(2):hover {
   transition: transform 500ms ease-out;
 }
 
+.menu:nth-of-type(2) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.menu:nth-of-type(3) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.menu:nth-of-type(4) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.menu__card:nth-of-type(1) {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.menu__card:nth-of-type(2) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.menu__card:nth-of-type(3) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.menu__card:nth-of-type(4) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+@-webkit-keyframes fondu {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  70%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fondu {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  70%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @media screen and (min-width: 1200px) {
   main {
     display: flex;

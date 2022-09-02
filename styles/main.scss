@@ -19,6 +19,67 @@ h1 {
     font-weight: 800;
 }
 
+.loader {
+    position: absolute;
+    z-index: 1;
+    background-color: #FFF;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: apparition 2s forwards;
+    &--element {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: #9356DC;
+        font-size: 11px;
+        background: #9356DC;
+        animation: escaleY 1s infinite ease-in-out;
+        width: 1em;
+        height: 4em;
+        animation-delay: -0.16s;
+    }
+  }
+  .loader--element:before,
+  .loader--element:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 2em;
+    color: #99E2D0;
+    background: #99E2D0;
+    width: 1em;
+    height: 4em;
+    animation: escaleY 1s infinite ease-in-out;
+  }
+  .loader--element:before {
+    left: -2em;
+    animation-delay: -0.32s;
+  }
+  
+  @keyframes escaleY {
+    0%, 80%, 100% {
+      box-shadow: 0 0;
+      height: 3em;
+    }
+    40% {
+      box-shadow: 0 -2em;
+      height: 4em;
+    }
+  }
+
+  @keyframes apparition {
+    0%, 70% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+  }
+
 header {
     width: 100%;
     text-align: center;
@@ -56,7 +117,6 @@ header {
         border-radius: 20px 20px 0 0;
         box-shadow: inset 0px 2px 5px darken($dark-background-color,10%), 2px 5px 10px darken($dark-background-color,5%);
         transition: 0.4s;
-
     }
 }
 
@@ -94,7 +154,6 @@ header {
         border-radius: 0 0 20px 20px;
         box-shadow: 2px 5px 10px darken($dark-background-color,5%);
         transition: 0.4s;
-
     }
 }
 
@@ -207,7 +266,7 @@ header {
             margin-top: 5px;
         }
     }
-    &__card--legende i {
+    /*&__card--legende i {
         margin-right: 12px;
         font-size: x-large;
         background-clip: text;
@@ -226,8 +285,23 @@ header {
                 opacity: 1;
             }
         }
-    }
+    }*/
 
+    &__card--legende--heart::before {
+        background: $heart-color;
+        margin-right: 12px;
+        font-size: x-large;
+        background-clip: text;
+        content: "\f004";
+        font-family: "Font Awesome 6 Free";
+        font-style: normal;
+        font-weight: 500;
+        transition: color 200ms;
+    }
+    &__card--legende--heart:hover::before {
+        font-weight: 600;
+        color: transparent;
+    }
 }
 
 @media screen and (min-width: 768px) {
