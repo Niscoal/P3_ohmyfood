@@ -1,17 +1,19 @@
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
 $background-color: #f6f6f6;
 $heart-color: linear-gradient(to top, $secondary-color, $primary-color);
-$dark-background-color: darken($background-color,5%);
-    
+$dark-background-color: darken($background-color, 5%);
+
 * {
     box-sizing: border-box;
     text-decoration: none;
 }
 
-header, main, footer {
-    font-family: 'Roboto', sans-serif;
+header,
+main,
+footer {
+    font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -20,9 +22,9 @@ h1 {
 }
 
 .loader {
-    position: absolute;
+    position: fixed;
     z-index: 1;
-    background-color: #FFF;
+    background-color: #fff;
     top: 0;
     right: 0;
     bottom: 0;
@@ -32,45 +34,48 @@ h1 {
         position: absolute;
         left: 50%;
         top: 50%;
-        color: #9356DC;
+        color: #9356dc;
         font-size: 11px;
-        background: #9356DC;
+        background: #9356dc;
         animation: escaleY 1s infinite ease-in-out;
         width: 1em;
         height: 4em;
         animation-delay: -0.16s;
     }
-  }
-  .loader--element:before,
-  .loader--element:after {
-    content: '';
+}
+.loader--element:before,
+.loader--element:after {
+    content: "";
     position: absolute;
     top: 0;
     left: 2em;
-    color: #99E2D0;
-    background: #99E2D0;
+    color: #99e2d0;
+    background: #99e2d0;
     width: 1em;
     height: 4em;
     animation: escaleY 1s infinite ease-in-out;
-  }
-  .loader--element:before {
+}
+.loader--element:before {
     left: -2em;
     animation-delay: -0.32s;
-  }
-  
-  @keyframes escaleY {
-    0%, 80%, 100% {
-      box-shadow: 0 0;
-      height: 3em;
+}
+
+@keyframes escaleY {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0;
+        height: 3em;
     }
     40% {
-      box-shadow: 0 -2em;
-      height: 4em;
+        box-shadow: 0 -2em;
+        height: 4em;
     }
-  }
+}
 
-  @keyframes apparition {
-    0%, 70% {
+@keyframes apparition {
+    0%,
+    70% {
         opacity: 1;
         visibility: visible;
     }
@@ -78,7 +83,7 @@ h1 {
         opacity: 0;
         visibility: hidden;
     }
-  }
+}
 
 header {
     width: 100%;
@@ -89,19 +94,12 @@ header {
     }
 }
 
-@media screen and (min-width: 768px) {
-    body {
-        max-width: 768px;
-        margin: 0 auto;
-    }
-}
-
 .localisation {
     width: 100%;
     text-align: center;
     color: lighten(black, 10%);
     background-color: $dark-background-color;
-    box-shadow: inset 0px 2px 5px darken($dark-background-color,10%) ;
+    box-shadow: inset 0px 2px 5px darken($dark-background-color, 10%);
     & p {
         margin: 0;
         padding: 15px 0;
@@ -109,14 +107,6 @@ header {
     }
     & i {
         margin-right: 15px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .localisation {
-        border-radius: 20px 20px 0 0;
-        box-shadow: inset 0px 2px 5px darken($dark-background-color,10%), 2px 5px 10px darken($dark-background-color,5%);
-        transition: 0.4s;
     }
 }
 
@@ -139,21 +129,17 @@ header {
         padding: 15px 20px;
         margin: 20px 0 50px 0;
         border-radius: 50px;
-        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
-        box-shadow: 2px 5px 10px darken($dark-background-color,15%);
+        background: linear-gradient(
+            to bottom right,
+            $secondary-color,
+            $primary-color
+        );
+        box-shadow: 2px 5px 10px darken($dark-background-color, 15%);
         &:hover {
-            box-shadow: 2px 5px 10px darken($dark-background-color,40%);
+            box-shadow: 2px 5px 10px darken($dark-background-color, 40%);
             opacity: 0.9;
             transition: 0.1s;
         }
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .description {
-        border-radius: 0 0 20px 20px;
-        box-shadow: 2px 5px 10px darken($dark-background-color,5%);
-        transition: 0.4s;
     }
 }
 
@@ -172,10 +158,11 @@ header {
         margin: 12px 25px;
         align-items: center;
         border-radius: 20px;
-        box-shadow: 2px 5px 10px darken($dark-background-color,5%);
+        box-shadow: 2px 5px 10px darken($dark-background-color, 5%);
+        cursor: pointer;
         &:hover {
             background-color: lighten($primary-color, 35%);
-            box-shadow: 2px 5px 10px darken($dark-background-color,20%);
+            box-shadow: 2px 5px 10px darken($dark-background-color, 20%);
             transition: 0.1s;
         }
         &:hover i {
@@ -192,15 +179,15 @@ header {
         background-color: $primary-color;
         border: unset;
         border-radius: 50px;
-        }
+    }
     &__btn i {
-        color: darken($background-color,50%);
-        font-size:large;
+        color: darken($background-color, 50%);
+        font-size: large;
         margin: 0 auto;
     }
     &__btn span {
-        font-family: 'Roboto', sans-serif;
-        color: lighten(black,10%);
+        font-family: "Roboto", sans-serif;
+        color: lighten(black, 10%);
         font-weight: 550;
         font-size: initial;
         display: inline-block;
@@ -226,9 +213,9 @@ header {
         margin: 0 25px;
         background-color: white;
         border-radius: 15px;
-        box-shadow: 2px 5px 10px darken($dark-background-color,5%);
+        box-shadow: 2px 5px 10px darken($dark-background-color, 5%);
         &:hover {
-            box-shadow: 2px 5px 10px darken($dark-background-color,40%);
+            box-shadow: 2px 5px 10px darken($dark-background-color, 40%);
             opacity: 0.9;
             transition: 0.2s;
         }
@@ -266,27 +253,6 @@ header {
             margin-top: 5px;
         }
     }
-    /*&__card--legende i {
-        margin-right: 12px;
-        font-size: x-large;
-        background-clip: text;
-        opacity: 1;
-        &:nth-child(2) {
-            position: absolute;
-            right: 0px;
-            margin-right: 12px;
-            font-size: x-large;
-            background: $heart-color;
-            background-clip: text;
-            color: transparent;
-            opacity: 0;
-            transition: 200ms;
-            &:hover {
-                opacity: 1;
-            }
-        }
-    }*/
-
     &__card--legende--heart::before {
         background: $heart-color;
         margin-right: 12px;
@@ -304,28 +270,6 @@ header {
     }
 }
 
-@media screen and (min-width: 768px) {
-    .restaurants {
-        margin: 0 auto;
-        flex-flow: row wrap;
-        border-radius: 20px 20px 0 0;
-        box-shadow: 2px 5px 10px darken($dark-background-color,5%);
-        row-gap: 40px;
-        & h1 {
-            width: 100%;
-        }
-        &__card {
-            width: 40%;
-            margin: 0 auto;
-        }
-        &__card--img {
-            max-width: 100%;
-            max-height: 150px;
-        }
-        transition: 0.2s;
-    }
-}
-
 footer {
     display: flex;
     padding-left: 25px;
@@ -335,7 +279,7 @@ footer {
     color: white;
     row-gap: 10px;
     & h4 {
-        font-family: 'Shrikhand', cursive;
+        font-family: "Shrikhand", cursive;
         font-size: 1.2rem;
         font-weight: 400;
     }
@@ -354,5 +298,42 @@ footer {
     }
     & .footer__fin {
         font-weight: 300;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .localisation {
+        border-radius: 20px 20px 0 0;
+        box-shadow: inset 0px 2px 5px darken($dark-background-color, 10%),
+            2px 5px 10px darken($dark-background-color, 5%);
+        transition: 0.4s;
+    }
+    .description {
+        border-radius: 0 0 20px 20px;
+        box-shadow: 2px 5px 10px darken($dark-background-color, 5%);
+        transition: 0.4s;
+    }
+    .restaurants {
+        margin: 0 auto;
+        flex-flow: row wrap;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 2px 5px 10px darken($dark-background-color, 5%);
+        row-gap: 40px;
+        & h1 {
+            width: 100%;
+        }
+        &__card {
+            width: 40%;
+            margin: 0 auto;
+        }
+        &__card--img {
+            max-width: 100%;
+            max-height: 150px;
+        }
+        transition: 0.2s;
     }
 }

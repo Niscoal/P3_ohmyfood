@@ -3,7 +3,9 @@
   text-decoration: none;
 }
 
-header, main, footer {
+header,
+main,
+footer {
   font-family: "Roboto", sans-serif;
 }
 
@@ -13,9 +15,9 @@ h1 {
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   z-index: 1;
-  background-color: #FFF;
+  background-color: #fff;
   top: 0;
   right: 0;
   bottom: 0;
@@ -27,9 +29,9 @@ h1 {
   position: absolute;
   left: 50%;
   top: 50%;
-  color: #9356DC;
+  color: #9356dc;
   font-size: 11px;
-  background: #9356DC;
+  background: #9356dc;
   -webkit-animation: escaleY 1s infinite ease-in-out;
           animation: escaleY 1s infinite ease-in-out;
   width: 1em;
@@ -44,8 +46,8 @@ h1 {
   position: absolute;
   top: 0;
   left: 2em;
-  color: #99E2D0;
-  background: #99E2D0;
+  color: #99e2d0;
+  background: #99e2d0;
   width: 1em;
   height: 4em;
   -webkit-animation: escaleY 1s infinite ease-in-out;
@@ -108,12 +110,6 @@ header img {
   width: 10rem;
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    max-width: 768px;
-    margin: 0 auto;
-  }
-}
 .localisation {
   width: 100%;
   text-align: center;
@@ -130,13 +126,6 @@ header img {
   margin-right: 15px;
 }
 
-@media screen and (min-width: 768px) {
-  .localisation {
-    border-radius: 20px 20px 0 0;
-    box-shadow: inset 0px 2px 5px #d0d0d0, 2px 5px 10px #dddddd;
-    transition: 0.4s;
-  }
-}
 .description {
   width: 100%;
   text-align: center;
@@ -157,7 +146,7 @@ header img {
   padding: 15px 20px;
   margin: 20px 0 50px 0;
   border-radius: 50px;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   box-shadow: 2px 5px 10px #c3c3c3;
 }
 .description__button:hover {
@@ -166,13 +155,6 @@ header img {
   transition: 0.1s;
 }
 
-@media screen and (min-width: 768px) {
-  .description {
-    border-radius: 0 0 20px 20px;
-    box-shadow: 2px 5px 10px #dddddd;
-    transition: 0.4s;
-  }
-}
 .fonctionnement {
   display: flex;
   flex-flow: column wrap;
@@ -190,6 +172,7 @@ header img {
   align-items: center;
   border-radius: 20px;
   box-shadow: 2px 5px 10px #dddddd;
+  cursor: pointer;
 }
 .fonctionnement__btn:hover {
   background-color: #f2eafb;
@@ -197,7 +180,7 @@ header img {
   transition: 0.1s;
 }
 .fonctionnement__btn:hover i {
-  color: #9356DC;
+  color: #9356dc;
 }
 .fonctionnement__btn--ordre {
   position: absolute;
@@ -206,7 +189,7 @@ header img {
   height: 23px;
   color: white;
   font-size: smaller;
-  background-color: #9356DC;
+  background-color: #9356dc;
   border: unset;
   border-radius: 50px;
 }
@@ -232,26 +215,6 @@ header img {
   width: 100%;
   row-gap: 20px;
   padding-bottom: 60px;
-  /*&__card--legende i {
-      margin-right: 12px;
-      font-size: x-large;
-      background-clip: text;
-      opacity: 1;
-      &:nth-child(2) {
-          position: absolute;
-          right: 0px;
-          margin-right: 12px;
-          font-size: x-large;
-          background: $heart-color;
-          background-clip: text;
-          color: transparent;
-          opacity: 0;
-          transition: 200ms;
-          &:hover {
-              opacity: 1;
-          }
-      }
-  }*/
 }
 .restaurants h1 {
   padding: 30px 0 0 20px;
@@ -279,7 +242,7 @@ header img {
 .restaurants__card--img--nouveau {
   position: absolute;
   right: 13px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #008766;
   font-size: small;
   font-weight: 500;
@@ -305,7 +268,7 @@ header img {
   margin-top: 5px;
 }
 .restaurants__card--legende--heart::before {
-  background: linear-gradient(to top, #FF79DA, #9356DC);
+  background: linear-gradient(to top, #ff79da, #9356dc);
   margin-right: 12px;
   font-size: x-large;
   -webkit-background-clip: text;
@@ -321,27 +284,6 @@ header img {
   color: transparent;
 }
 
-@media screen and (min-width: 768px) {
-  .restaurants {
-    margin: 0 auto;
-    flex-flow: row wrap;
-    border-radius: 20px 20px 0 0;
-    box-shadow: 2px 5px 10px #dddddd;
-    row-gap: 40px;
-    transition: 0.2s;
-  }
-  .restaurants h1 {
-    width: 100%;
-  }
-  .restaurants__card {
-    width: 40%;
-    margin: 0 auto;
-  }
-  .restaurants__card--img {
-    max-width: 100%;
-    max-height: 150px;
-  }
-}
 footer {
   display: flex;
   padding-left: 25px;
@@ -371,4 +313,40 @@ footer a:hover {
 }
 footer .footer__fin {
   font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .localisation {
+    border-radius: 20px 20px 0 0;
+    box-shadow: inset 0px 2px 5px #d0d0d0, 2px 5px 10px #dddddd;
+    transition: 0.4s;
+  }
+  .description {
+    border-radius: 0 0 20px 20px;
+    box-shadow: 2px 5px 10px #dddddd;
+    transition: 0.4s;
+  }
+  .restaurants {
+    margin: 0 auto;
+    flex-flow: row wrap;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 2px 5px 10px #dddddd;
+    row-gap: 40px;
+    transition: 0.2s;
+  }
+  .restaurants h1 {
+    width: 100%;
+  }
+  .restaurants__card {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .restaurants__card--img {
+    max-width: 100%;
+    max-height: 150px;
+  }
 }/*# sourceMappingURL=main.css.map */

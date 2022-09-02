@@ -3,7 +3,9 @@
   text-decoration: none;
 }
 
-header, main, footer {
+header,
+main,
+footer {
   font-family: "Roboto", sans-serif;
 }
 
@@ -23,7 +25,6 @@ h2 {
   margin: 0;
 }
 
-/* -------------------------- FIN DES APPELS -------------------------- */
 header {
   position: relative;
   width: 100%;
@@ -49,17 +50,6 @@ header figure img {
      object-fit: cover;
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    max-width: 768px;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  body {
-    max-width: 1200px;
-  }
-}
 main {
   position: relative;
   border-radius: 40px 40px 0 0;
@@ -74,7 +64,7 @@ main h1 {
 }
 
 .titre--heart::before {
-  background: linear-gradient(to top, #FF79DA, #9356DC);
+  background: linear-gradient(to top, #ff79da, #9356dc);
   margin-right: 12px;
   font-size: x-large;
   -webkit-background-clip: text;
@@ -108,7 +98,7 @@ main h1 {
   margin-left: 8px;
   width: 2.5rem;
   height: 3px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 
 .menu__card {
@@ -125,6 +115,7 @@ main h1 {
   border-radius: 15px;
   box-shadow: 2px 5px 10px #d0d0d0;
   margin-top: 0.8rem;
+  cursor: pointer;
 }
 .menu__card--fixe {
   margin: 10px;
@@ -190,7 +181,7 @@ main h1 {
   transform: translateX(0px);
   transition: transform 500ms;
   border-radius: 0 15px 15px 0;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 .menu__card--mobile i {
   margin: auto 20px;
@@ -261,24 +252,11 @@ main h1 {
     transform: translateY(0);
   }
 }
-@media screen and (min-width: 1200px) {
-  main {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding: 20px 25px;
-  }
-  .titre {
-    width: 100%;
-  }
-  .menu {
-    max-width: 32%;
-  }
-}
 .description {
   width: 100%;
   text-align: center;
   margin: 15px 0;
+  cursor: pointer;
 }
 .description__button {
   text-align: center;
@@ -287,7 +265,7 @@ main h1 {
   padding: 15px 50px;
   margin: 20px 0 50px 0;
   border-radius: 50px;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   box-shadow: 2px 5px 10px #c3c3c3;
 }
 .description__button:hover {
@@ -325,4 +303,28 @@ footer a:hover {
 }
 footer .footer__fin {
   font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    max-width: 1200px;
+  }
+  main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 20px 25px;
+  }
+  .titre {
+    width: 100%;
+  }
+  .menu {
+    max-width: 32%;
+  }
 }/*# sourceMappingURL=menu.css.map */

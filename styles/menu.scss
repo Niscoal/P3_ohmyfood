@@ -1,9 +1,9 @@
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
 $background-color: #f6f6f6;
 $heart-color: linear-gradient(to top, $secondary-color, $primary-color);
-$dark-background-color: darken($background-color,5%);
+$dark-background-color: darken($background-color, 5%);
 $font-color: black;
 
 * {
@@ -11,15 +11,17 @@ $font-color: black;
     text-decoration: none;
 }
 
-header, main, footer {
-    font-family: 'Roboto', sans-serif;
+header,
+main,
+footer {
+    font-family: "Roboto", sans-serif;
 }
 
 h1 {
     color: $font-color;
     font-size: 1.7rem;
     font-weight: 400;
-    font-family: 'Shrikhand', cursive;
+    font-family: "Shrikhand", cursive;
     margin-bottom: 5px;
 }
 
@@ -30,7 +32,7 @@ h2 {
     color: lighten($font-color, 40%);
     margin: 0;
 }
-/* -------------------------- FIN DES APPELS -------------------------- */
+
 header {
     position: relative;
     width: 100%;
@@ -52,19 +54,6 @@ header {
             max-height: 350px;
             object-fit: cover;
         }
-    }
-}
-
-@media screen and (min-width: 768px) {
-    body {
-        max-width: 768px;
-        margin: 0 auto;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    body {
-        max-width: 1200px;
     }
 }
 
@@ -125,8 +114,9 @@ main {
     width: 100%;
     background-color: lighten($background-color, 100%);
     border-radius: 15px;
-    box-shadow: 2px 5px 10px darken($dark-background-color,10%);
+    box-shadow: 2px 5px 10px darken($dark-background-color, 10%);
     margin-top: 0.8rem;
+    cursor: pointer;
     &--fixe {
         margin: 10px;
         display: flex;
@@ -173,7 +163,7 @@ main {
     }
 
     &:hover {
-        box-shadow: 2px 5px 10px darken($dark-background-color,40%);
+        box-shadow: 2px 5px 10px darken($dark-background-color, 40%);
         opacity: 0.9;
         transition: 0.2s;
 
@@ -226,7 +216,8 @@ main {
         opacity: 0;
         transform: translateY(1rem);
     }
-    70%,100% {
+    70%,
+    100% {
         opacity: 1;
     }
     100% {
@@ -234,25 +225,11 @@ main {
     }
 }
 
-@media screen and (min-width: 1200px) {
-    main {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        padding: 20px 25px;
-    }
-    .titre {
-        width: 100%;
-    }
-    .menu {
-        max-width: 32%;
-    }
-}
-
 .description {
     width: 100%;
     text-align: center;
     margin: 15px 0;
+    cursor: pointer;
     &__button {
         text-align: center;
         color: white;
@@ -260,10 +237,14 @@ main {
         padding: 15px 50px;
         margin: 20px 0 50px 0;
         border-radius: 50px;
-        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
-        box-shadow: 2px 5px 10px darken($dark-background-color,15%);
+        background: linear-gradient(
+            to bottom right,
+            $secondary-color,
+            $primary-color
+        );
+        box-shadow: 2px 5px 10px darken($dark-background-color, 15%);
         &:hover {
-            box-shadow: 2px 5px 10px darken($dark-background-color,40%);
+            box-shadow: 2px 5px 10px darken($dark-background-color, 40%);
             opacity: 0.9;
             transition: 0.1s;
         }
@@ -279,7 +260,7 @@ footer {
     color: white;
     row-gap: 10px;
     & h4 {
-        font-family: 'Shrikhand', cursive;
+        font-family: "Shrikhand", cursive;
         font-size: 1.2rem;
         font-weight: 400;
     }
@@ -298,5 +279,30 @@ footer {
     }
     & .footer__fin {
         font-weight: 300;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        max-width: 1200px;
+    }
+    main {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 20px 25px;
+    }
+    .titre {
+        width: 100%;
+    }
+    .menu {
+        max-width: 32%;
     }
 }
