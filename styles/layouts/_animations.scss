@@ -1,0 +1,81 @@
+/* Animation loader sur la main page*/
+
+@-webkit-keyframes escaleY {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0;
+        height: 3em;
+    }
+    40% {
+        box-shadow: 0 -2em;
+        height: 4em;
+    }
+}
+
+@keyframes escaleY {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0;
+        height: 3em;
+    }
+    40% {
+        box-shadow: 0 -2em;
+        height: 4em;
+    }
+}
+
+@-webkit-keyframes apparition {
+    0%,
+    70% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes apparition {
+    0%,
+    70% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Animation validation page menu*/
+
+@-webkit-keyframes validation {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    70%,
+    100% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes validation {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    70%,
+    100% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

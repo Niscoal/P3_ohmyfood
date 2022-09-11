@@ -1,10 +1,5 @@
-$primary-color: #9356dc;
-$secondary-color: #ff79da;
-$tertiary-color: #99e2d0;
-$background-color: #f6f6f6;
-$heart-color: linear-gradient(to top, $secondary-color, $primary-color);
-$dark-background-color: darken($background-color, 5%);
-$font-color: black;
+@import "./utils/variables";
+@import "./layouts/animations";
 
 * {
     box-sizing: border-box;
@@ -52,6 +47,7 @@ header {
         & img {
             width: 100%;
             max-height: 350px;
+            -o-object-fit: cover;
             object-fit: cover;
         }
     }
@@ -74,12 +70,13 @@ main {
     background: $heart-color;
     margin-right: 12px;
     font-size: x-large;
+    -webkit-background-clip: text;
     background-clip: text;
     content: "\f004";
     font-family: "Font Awesome 6 Free";
     font-style: normal;
     font-weight: 500;
-    transition: color 200ms;
+    transition: color 500ms;
 }
 .titre--heart:hover::before {
     font-weight: 600;
@@ -89,7 +86,9 @@ main {
 .menu {
     display: flex;
     flex-direction: column;
-    animation: fondu 750ms;
+    -webkit-animation: validation 750ms;
+    animation: validation 750ms;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     opacity: 0;
     & h2 {
@@ -105,7 +104,9 @@ main {
 }
 
 .menu__card {
-    animation: fondu 750ms;
+    -webkit-animation: validation 750ms;
+    animation: validation 750ms;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     opacity: 0;
     display: flex;
@@ -199,29 +200,17 @@ main {
     }
 }
 
-@for $i from 2 through 4 {
+@for $i from 3 through 4 {
     .menu:nth-of-type(#{$i}) {
+        -webkit-animation-delay: $i * 100ms;
         animation-delay: $i * 100ms;
     }
 }
 
 @for $i from 1 through 4 {
     .menu__card:nth-of-type(#{$i}) {
+        -webkit-animation-delay: $i * 100ms;
         animation-delay: $i * 100ms;
-    }
-}
-
-@keyframes fondu {
-    0% {
-        opacity: 0;
-        transform: translateY(1rem);
-    }
-    70%,
-    100% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0);
     }
 }
 

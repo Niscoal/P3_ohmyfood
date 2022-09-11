@@ -1,3 +1,69 @@
+/* Animation loader sur la main page*/
+@-webkit-keyframes escaleY {
+  0%, 80%, 100% {
+    box-shadow: 0 0;
+    height: 3em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 4em;
+  }
+}
+@keyframes escaleY {
+  0%, 80%, 100% {
+    box-shadow: 0 0;
+    height: 3em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 4em;
+  }
+}
+@-webkit-keyframes apparition {
+  0%, 70% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes apparition {
+  0%, 70% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* Animation validation page menu*/
+@-webkit-keyframes validation {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  70%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes validation {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  70%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 * {
   box-sizing: border-box;
   text-decoration: none;
@@ -47,7 +113,7 @@ header figure img {
   width: 100%;
   max-height: 350px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 main {
@@ -68,12 +134,12 @@ main h1 {
   margin-right: 12px;
   font-size: x-large;
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   content: "\f004";
   font-family: "Font Awesome 6 Free";
   font-style: normal;
   font-weight: 500;
-  transition: color 200ms;
+  transition: color 500ms;
 }
 
 .titre--heart:hover::before {
@@ -84,10 +150,10 @@ main h1 {
 .menu {
   display: flex;
   flex-direction: column;
-  -webkit-animation: fondu 750ms;
-          animation: fondu 750ms;
+  -webkit-animation: validation 750ms;
+  animation: validation 750ms;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 .menu h2 {
@@ -102,10 +168,10 @@ main h1 {
 }
 
 .menu__card {
-  -webkit-animation: fondu 750ms;
-          animation: fondu 750ms;
+  -webkit-animation: validation 750ms;
+  animation: validation 750ms;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   opacity: 0;
   display: flex;
   position: relative;
@@ -192,66 +258,36 @@ main h1 {
   transition: transform 500ms ease-out;
 }
 
-.menu:nth-of-type(2) {
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
-}
-
 .menu:nth-of-type(3) {
   -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+  animation-delay: 300ms;
 }
 
 .menu:nth-of-type(4) {
   -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
+  animation-delay: 400ms;
 }
 
 .menu__card:nth-of-type(1) {
   -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
+  animation-delay: 100ms;
 }
 
 .menu__card:nth-of-type(2) {
   -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
+  animation-delay: 200ms;
 }
 
 .menu__card:nth-of-type(3) {
   -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+  animation-delay: 300ms;
 }
 
 .menu__card:nth-of-type(4) {
   -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
+  animation-delay: 400ms;
 }
 
-@-webkit-keyframes fondu {
-  0% {
-    opacity: 0;
-    transform: translateY(1rem);
-  }
-  70%, 100% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes fondu {
-  0% {
-    opacity: 0;
-    transform: translateY(1rem);
-  }
-  70%, 100% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 .description {
   width: 100%;
   text-align: center;
