@@ -146,6 +146,9 @@ header {
         }
     }
     &__btn--ordre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         margin-left: -40px;
         width: 23px;
