@@ -39,8 +39,8 @@
     visibility: hidden;
   }
 }
-/* Animation validation page menu*/
-@-webkit-keyframes validation {
+/* Animation progressive page menu*/
+@-webkit-keyframes progressif {
   0% {
     opacity: 0;
     transform: translateY(1rem);
@@ -52,7 +52,7 @@
     transform: translateY(0);
   }
 }
-@keyframes validation {
+@keyframes progressif {
   0% {
     opacity: 0;
     transform: translateY(1rem);
@@ -150,8 +150,8 @@ main h1 {
 .menu {
   display: flex;
   flex-direction: column;
-  -webkit-animation: validation 750ms;
-  animation: validation 750ms;
+  -webkit-animation: progressif 750ms;
+  animation: progressif 750ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   opacity: 0;
@@ -168,8 +168,8 @@ main h1 {
 }
 
 .menu__card {
-  -webkit-animation: validation 750ms;
-  animation: validation 750ms;
+  -webkit-animation: progressif 750ms;
+  animation: progressif 750ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   opacity: 0;

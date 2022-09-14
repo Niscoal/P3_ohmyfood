@@ -86,8 +86,8 @@ main {
 .menu {
     display: flex;
     flex-direction: column;
-    -webkit-animation: validation 750ms;
-    animation: validation 750ms;
+    -webkit-animation: progressif 750ms;
+    animation: progressif 750ms;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     opacity: 0;
@@ -104,8 +104,8 @@ main {
 }
 
 .menu__card {
-    -webkit-animation: validation 750ms;
-    animation: validation 750ms;
+    -webkit-animation: progressif 750ms;
+    animation: progressif 750ms;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     opacity: 0;

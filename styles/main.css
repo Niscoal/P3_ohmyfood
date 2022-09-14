@@ -39,8 +39,8 @@
     visibility: hidden;
   }
 }
-/* Animation validation page menu*/
-@-webkit-keyframes validation {
+/* Animation progressive page menu*/
+@-webkit-keyframes progressif {
   0% {
     opacity: 0;
     transform: translateY(1rem);
@@ -52,7 +52,7 @@
     transform: translateY(0);
   }
 }
-@keyframes validation {
+@keyframes progressif {
   0% {
     opacity: 0;
     transform: translateY(1rem);
